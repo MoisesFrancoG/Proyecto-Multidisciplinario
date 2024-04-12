@@ -80,8 +80,13 @@ public class Insumos {
                     try {
                         System.out.print("Ingrese el costo del insumo: ");
                         double costo= entrada.nextDouble();
-                        nuevoInsumo.setCostoInsumo(costo);
-                        validacion1 = false;
+                        if(costo <= 0) {
+                            System.out.println("Cantidad no válida.");
+                            continue;
+                        } else {
+                            nuevoInsumo.setCostoInsumo(costo);
+                            validacion1 = false;
+                        }
                     } catch (InputMismatchException e) {
                         System.out.println("Ingrese una opción númerica.");
                         System.out.println(" ");
@@ -201,6 +206,7 @@ public class Insumos {
             do {
                 do {
                     try {
+                        System.out.println(" ");
                         System.out.println("Seleccione qué desea modificar");
                         System.out.println("1. Costo del insumo");
                         System.out.println("2. Periodo de pago del insumo");
@@ -222,9 +228,15 @@ public class Insumos {
                         System.out.println(" ");
                         System.out.print("Ingrese el nuevo costo del insumo: ");
                         double nuevoCosto = entrada.nextDouble();
-                        insumoModificar.setCostoInsumo(nuevoCosto);
-                        System.out.println("Costo del insumo modificado exitosamente");
-                        opcionValida = false;
+                        if(nuevoCosto <= 0) {
+                            System.out.println("Cantidad no válida.");
+                            continue;
+                        } else {
+                            insumoModificar.setCostoInsumo(nuevoCosto);
+                            System.out.println("Costo del insumo modificado exitosamente");
+                            System.out.println(" ");
+                            opcionValida = false;
+                        }
                     } catch (InputMismatchException e) {
                         System.out.println("Ingrese una opción númerica.");
                         System.out.println(" ");
@@ -243,6 +255,7 @@ public class Insumos {
                         String nuevoPeriodo = entrada.nextLine();
                         insumoModificar.setPeriodoPagoInsumo(nuevoPeriodo);
                         System.out.println("Periodo de pago del insumo modificado exitosamente");
+                        System.out.println(" ");
                         opcionValida2 = false;
                     } catch (InputMismatchException e) {
                         System.out.println("Ingrese una opción númerica.");

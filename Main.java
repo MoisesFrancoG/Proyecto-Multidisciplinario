@@ -36,7 +36,7 @@ public class Main {
             String password = entrada.nextLine();
             if (password.equals(contraseña)) {
                 accesoSistema = false;
-                System.out.println("BIENVENIDO AL SISTEMA" + usuario);
+                System.out.println("BIENVENIDO AL SISTEMA " + usuario);
             } else {
                 System.out.println("Contraseña incorrecta... Inténtelo nuevamente.");
             }

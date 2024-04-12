@@ -147,6 +147,7 @@ public class Cliente {
         }
         do {
             try {
+                System.out.println(" ");
                 System.out.println("LISTA DE CLIENTES:");
                 for (Cliente cliente : listaClientes) {
                     System.out.println("ID: " + cliente.getId() + " - Nombre: " + cliente.getNombre());
@@ -183,6 +184,7 @@ public class Cliente {
         
         do {
             try {
+                System.out.println(" ");
                 System.out.println("¿Desea eliminar otro cliente?");
                 System.out.println("1.Si, 2.No");
                 int opcioC = entrada.nextInt();
@@ -221,6 +223,7 @@ public class Cliente {
         }
         do {
             try {
+                System.out.println(" ");
                 System.out.print("Ingrese el id del cliente para modificar la deuda: ");
                 clienteModificado = entrada.nextInt();
                 validacion = false;
@@ -242,6 +245,7 @@ public class Cliente {
             boolean valida = true;
             do {
                 try {
+                    System.out.println(" ");
                     System.out.print("Ingrese la cantidad a pagar de la deuda: ");
                     abonoDeuda = entrada.nextInt();
                     valida = false;
